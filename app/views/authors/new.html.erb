@@ -1,0 +1,13 @@
+<%= form_with model:@author do | form|%>
+<p>Author name:-</P>
+<%= form.label :name%>
+<%= form.text_field :name%>
+<p>Author book details :- </p>
+<%= form.fields_for :books do | book_form |%>
+<%#= book_form.check_box :_d estroy%>
+<%= book_form.label :title %>
+<%= book_form.text_field :title %>
+<% end %><br><br>
+<%= form.submit %>
+<%= link_to 'Back', root_path %>
+<% end%>

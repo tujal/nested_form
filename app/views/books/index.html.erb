@@ -1,0 +1,10 @@
+<%= flash.each do | message |%>
+<p style="color:red"><%= message %></p>
+<% end%>
+<% @books.each do | book|%>
+<% if @author == book.author_id%>
+<%= book.title%>
+<% else %>
+<h3>No data</h3>
+<% end%>
+<% end%>

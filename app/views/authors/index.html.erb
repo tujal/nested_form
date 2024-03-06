@@ -1,0 +1,7 @@
+<h1> Authors listing </h2>
+<ul>
+<% @authors.each do | author |%>
+<li><%= link_to author.name, author %></li>
+<% end%>
+</ul>
+<%= link_to 'New author', new_author_path %>
